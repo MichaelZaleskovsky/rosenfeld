@@ -1,0 +1,11 @@
+<div class="container">
+<h2>Your name: </h2>
+
+<input [(ngModel)]="editorsName">
+<span>{{noName}}</span>
+<h2>Your message: </h2>
+<div [froalaEditor]="options"  [(froalaModel)]="editorContent"></div>
+<span>{{errMsg}}</span><br>
+<button (click)="saveAndPost()" class = "btn btn-success" >SAVE</button>
+<button (click)="notSave()" class = "btn btn-success">CANCEL</button>
+</div>

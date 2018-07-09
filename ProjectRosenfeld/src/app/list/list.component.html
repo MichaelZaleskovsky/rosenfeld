@@ -1,0 +1,16 @@
+
+
+<div class="container  bg-dark p-4">
+
+  <a routerLink="/edit" class="btn btn-success">NEW REPORT</a>
+
+  <div *ngFor="let report of reports.reverse()" class="item mt-2" style = "border-bottom: 1px solid #424244">
+    <p class = "font-weight-bold text-left text-uppercase "> {{report.name}}</p>
+
+    <p class = "font-weight-bold text-left text-success text-uppercase" style = "margin-top: -0.7rem;"> {{toDate(report.time) | date: 'hh:mm aa - dd/MM/yyyy'}}</p>
+
+    <div class = "text-left text-justify small mt-2" [innerHTML]="report.text">
+    </div>
+  </div>
+
+</div>
